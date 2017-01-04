@@ -1,0 +1,9 @@
+/*body{
+	text-align: center;
+	}*/
+	li{
+		text-transform: capitalize;
+	}
+	#showName{
+		text-transform: capitalize;	
+	}
