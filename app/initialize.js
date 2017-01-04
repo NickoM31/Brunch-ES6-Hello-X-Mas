@@ -10,26 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
 		ul.appendChild(li);
 		li.innerHTML = inputValue;
 		tab.push(inputValue);
-		console.log(tab);
-
+		// console.log(tab);
 		function hello(personn =' Père Noel' + '!'){
 			if (inputValue === ""){
 				li.innerHTML = ('Bonjour' + personn);
 			}else{
 				li.innerHTML = ('Bonjour ' + inputValue + '!');
 			}
-
 		}
 		hello();
 	});
 	searchBtn.addEventListener('click',(event)=>{
-		console.log('click');
+		// console.log('click');
 		let filteredTab = [];
-		let filteredValue = document.getElementById('filteredName').value;
-		console.log(filteredValue);
-		for(var i = 0; i < filteredTab.length; i++){
-			let element = filteredTab[i];
-			console.log(element);
+		let searchValue = document.getElementById('filteredName').value;
+		let showFilteredName = document.getElementById('showName');
+		// console.log(filteredValue);
+		for(let i = 0; i < tab.length; i++){
+			let element = tab[i];
+			let filteredValue = element.indexOf(searchValue);
+			// console.log(filtervalue);
+			if(filteredValue === 0){
+				filteredTab.push(element);
+				console.log(filteredTab);
+				showFilteredName.innerHTML = filteredTab;
+			}
+
+
 		}
 	});
 });
