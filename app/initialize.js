@@ -21,22 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		hello();
 	});
 	searchBtn.addEventListener('click',(event)=>{
-		// console.log('click');
 		let filteredTab = [];
 		let searchValue = document.getElementById('filteredName').value;
 		let showFilteredName = document.getElementById('showName');
-		// console.log(filteredValue);
 		for(let i = 0; i < tab.length; i++){
 			let element = tab[i];
 			let filteredValue = element.indexOf(searchValue);
-			// console.log(filtervalue);
 			if(filteredValue === 0){
 				filteredTab.push(element);
 				console.log(filteredTab);
 				showFilteredName.innerHTML = filteredTab;
 			}
-
-
 		}
 	});
 });
