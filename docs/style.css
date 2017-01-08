@@ -1,9 +1,10 @@
-/*body{
+h1{
 	text-align: center;
-	}*/
-	li{
-		text-transform: capitalize;
-	}
-	#showName{
-		text-transform: capitalize;	
-	}
+}
+li{
+	text-transform: capitalize;
+	list-style-type:none; 
+}
+#showFilteredName{
+	text-transform: capitalize;
+}

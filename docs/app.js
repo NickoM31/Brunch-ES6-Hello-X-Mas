@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		ul.appendChild(li);
 		li.innerHTML = inputValue;
 		tab.push(inputValue);
-		// console.log(tab);
 		function hello() {
 			var personn = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ' Père Noel' + '!';
 
@@ -178,19 +177,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	searchBtn.addEventListener('click', function (event) {
 		var filteredTab = [];
 		var searchValue = document.getElementById('filteredName').value;
-		var showFilteredName = document.getElementById('showName');
+		var showFilteredName = document.getElementById('showFilteredName');
 		for (var i = 0; i < tab.length; i++) {
 			var element = tab[i];
 			var filteredValue = element.indexOf(searchValue);
 			if (filteredValue === 0) {
 				filteredTab.push(element);
-				console.log(filteredTab);
 				showFilteredName.innerHTML = filteredTab;
 			}
 		}
 	});
 });
-// console.log('Initialized app');
 });
 
 require.register("___globals___", function(exports, require, module) {
