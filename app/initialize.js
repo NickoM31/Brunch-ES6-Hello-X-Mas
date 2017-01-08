@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		ul.appendChild(li);
 		li.innerHTML = inputValue;
 		tab.push(inputValue);
-		// console.log(tab);
 		function hello(personn =' Père Noel' + '!'){
 			if (inputValue === ""){
 				li.innerHTML = ('Bonjour' + personn);
@@ -23,16 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	searchBtn.addEventListener('click',(event)=>{
 		let filteredTab = [];
 		let searchValue = document.getElementById('filteredName').value;
-		let showFilteredName = document.getElementById('showName');
+		let showFilteredName = document.getElementById('showFilteredName');
 		for(let i = 0; i < tab.length; i++){
 			let element = tab[i];
 			let filteredValue = element.indexOf(searchValue);
 			if(filteredValue === 0){
 				filteredTab.push(element);
-				console.log(filteredTab);
 				showFilteredName.innerHTML = filteredTab;
 			}
 		}
 	});
 });
-  // console.log('Initialized app');
+
